@@ -1,0 +1,44 @@
+:root {
+   --lighter-color: #F9F7C9;
+   --light-color: #D5F0C1;
+   --dark-color: #AAD9BB;
+   --darker-color: #80BCBD;
+
+   background-color: var(--light-color);
+}
+
+#landing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "nav-area nav-area nav-area"
+        ". banner-area ."
+        ". content-area .";
+    row-gap: 2em;
+}
+
+#banner-container {
+    grid-area: banner-area;
+    background-color: white;
+    border-radius: 50% 20% / 10% 40%;
+    padding: 4em 4em;
+    max-width: max-content;
+}
+
+#nav {
+    background-color: var(--darker-color);
+    grid-area: nav-area;
+}
+
+#content {
+    grid-area: content-area;
+    width: 5em;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
