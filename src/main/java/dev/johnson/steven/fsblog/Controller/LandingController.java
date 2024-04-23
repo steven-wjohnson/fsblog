@@ -1,4 +1,4 @@
-package Controller;
+package dev.johnson.steven.fsblog.Controller;
 
 import org.springframework.stereotype.Controller;
 
