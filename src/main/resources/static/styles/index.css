@@ -1,44 +1,64 @@
 :root {
-   --lighter-color: #F9F7C9;
+   /* --lighter-color: #F9F7C9;
    --light-color: #D5F0C1;
    --dark-color: #AAD9BB;
-   --darker-color: #80BCBD;
+   --darker-color: #80BCBD; */
+   
+    --lighter-color: #F0F5F9; /* Light, soft background color */
+    --light-color: #70C1B3; /* Light, warm accent color */
+    --dark-color: #234E52; /* Dark, professional color for text */
+    --darker-color: #5E748B; /* Darker color for headings or accents */
+    --accent-color: #FF6B6B;
 
-   background-color: var(--light-color);
+   background-color: var(--lighter-color);
+   padding: 2em;
 }
 
 #landing-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "nav-area nav-area nav-area"
-        ". banner-area ."
-        ". content-area .";
-    row-gap: 2em;
+    max-width: 1200px;
+}
+
+@media (min-width: 1200px) {
+    #landing-container {
+        margin: 0 auto;
+    }
 }
 
 #banner-container {
-    grid-area: banner-area;
-    background-color: white;
-    border-radius: 50% 20% / 10% 40%;
-    padding: 4em 4em;
-    max-width: max-content;
+    display: flex;
+    padding: 2em 2em; 
+    font-family: 'Courier New', Courier, monospace;
 }
 
-#nav {
-    background-color: var(--darker-color);
-    grid-area: nav-area;
+#banner-container > h1 {
+    color: var(--dark-color);
+}
+
+.header-accent {
+    display: block;
+    color: var(--accent-color);
+}
+
+#nav {    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#nav > a {
+    color: var(--light-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: var(--accent-color);
 }
 
 #content {
-    grid-area: content-area;
-    width: 5em;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1em;
+    max-width: 90%;
 }
-
-h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    font-size: x-large;
-}
-
